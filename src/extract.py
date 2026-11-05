@@ -55,7 +55,7 @@ def buscar_videos(video_ids):
     for i in range(0, len(video_ids), 50):
         lote = video_ids[i:i + 50]
         params = {
-            "part": "snippet,statistics,contentDetails",
+            "part": "snippet,statistics,contentDetails,liveStreamingDetails",
             "id": ",".join(lote),
             "key": YOUTUBE_API_KEY,
         }
